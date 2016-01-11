@@ -146,6 +146,7 @@ fi
 
 # recreate database
 echo "recreate database \"$dbName\""
+export result=0
 PGPASSWORD=$dbPwd createdb -h $dbHost -p $dbPort -E UNICODE -O $dbUser -U $dbUser $dbName
 if [ $result -ne 0 ]
 then
